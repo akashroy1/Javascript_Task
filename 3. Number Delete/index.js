@@ -14,19 +14,27 @@ function display() {
 display();
 
 function del() {
-    document.getElementById('result').innerHTML= ``;
     var divi = parseInt(document.getElementById('div').value);
     const newarr = [...myarr];
-    
-    for (let i = 0; i < newarr.length; i++) {
-        let element = newarr[i];
-        if (element%divi === 0) {
-            myarr.splice(myarr.indexOf(element), 1);
-            // console.log(myarr);
-        }
+    if (document.getElementById('div').value == "")
+    {
+        alert("Divisor can't be empty");
     }
-
-    myarr.forEach(function(element){
-        document.getElementById('result').innerHTML+= `<button>${element}</button> `;
-    });
+    else if (divi == 0) {
+        alert("Divisor can't be zero");
+    }
+    else
+    {
+        document.getElementById('result').innerHTML= ``;
+        for (let i = 0; i < newarr.length; i++) {
+            let element = newarr[i];
+            if (element%divi === 0) {
+                myarr.splice(myarr.indexOf(element), 1);
+                // console.log(myarr);
+            }
+        }
+        myarr.forEach(function(element){
+            document.getElementById('result').innerHTML+= `<button>${element}</button> `;
+        });
+    }
 }
