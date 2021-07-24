@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form action="#">
+        <div>
+            <lebel for="name">Name:</lebel>
+            <input type="text" id="name">
+        </div>
+        <br>
+        <div>
+            <lebel for="email">EMail:</lebel>
+            <input type="email" id="email">
+        </div>
+        <br>
+        <div>
+            <lebel for="pass1">Password:</lebel>
+            <input type="password" id="pass1">
+        </div>
+        <br>
+        <button id="validation">POST</button>
+    </form>
+
+    <script>
+        form1 = document.getElementById('validation');
+        form1.addEventListener("click", ()=>{
+            if (document.getElementById('name').value=="") {
+                alert("Name field is empty. Re-enter the field again.");
+            }
+            if (document.getElementById('name').value.length<3) {
+                alert("Name is too short");
+            }
+            if (document.getElementById('email').value=="") {
+                alert("Email field is empty. Re-enter the field again.");
+            }
+            if (document.getElementById('email').value.includes("@")==false) {
+                alert("Not a valid Email. Please Check");
+            }
+            if (document.getElementById('email').value.includes("@")==false) {
+                alert("Not a valid Email. Please Check");
+            }
+            if (document.getElementById('pass1').value=="") {
+                alert("Password Can't be empty.");
+            }
+        });
+    </script>
+</body>
+</html>

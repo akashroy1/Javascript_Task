@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #btn {
+            margin: 0;
+            padding: 15px 32px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn">Change Color</button>
+
+    <script>
+        change = document.getElementById('btn');
+
+        function random_Color() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        
+        change.addEventListener("click", ()=>{
+            document.getElementById('btn').style.backgroundColor = random_Color();
+            document.getElementById('btn').style.color = random_Color();
+            document.body.bgColor = random_Color();
+        });
+    </script>
+</body>
+</html>
+
+<!-- // var letters = '0123456789ABCDEF';
+// var color = '#';
+// for (var i = 0; i < 6; i++) {
+//     color += letters[Math.floor(Math.random() * 16)];
+// } -->
+
+
+<!-- // console.log(color);
+// console.log(color2); 
+// color2 = color; -->
+
+<!-- // var color2 = '#ffffff'
+// var color3 = '#000000' -->

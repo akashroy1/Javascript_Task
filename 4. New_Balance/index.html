@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Calculator</title>
+    <script src="calculate.js"></script>
+</head>
+<body>
+    <form action="#">
+        <div>
+            <lebel for="acnum">Account Number:</lebel>
+            <input type="number" id="acnum">
+        </div>
+        <br>
+        <div>
+            <lebel for="crLimit">Credit Limit:</lebel>
+            <input type="number" id="crLimit">
+        </div>
+        <br>
+        <div>
+            <lebel for="bgBal">Beginning Balance:</lebel>
+            <input type="number" id="bgBal">
+        </div>
+        <br>
+        <div>
+            <lebel for="totalexp">Total Expenditure:</lebel>
+            <input type="number" id="totalexp">
+        </div>
+        <br>
+        <div>
+            <lebel for="totCredit">Total Credit Payment:</lebel>
+            <input type="number" id="totCredit">
+        </div>
+        <br>
+        <button type="submit" onclick="calculate()">Calculate</button>
+        <br><br>
+        <div id="display"> </div>
+    </form>
+
+</body>
+</html>
